@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 11. Формы -->
+
+    <!-- Формы - это специальные теги, позволяющие взаимодействовать с пользователем -->
+    <form action="">
+      <div>
+        <label for="text2">Текст</label>
+        <input type="text" id="text2" value="Текст по умолчанию" readonly />
+      </div>
+      <!-- <form action=""></form> - облошка для создания формы, внутри этого тега описываем какие-либо элементы 
+    action="" - атрибут, который обозначает кто будет обрабатывать данную форму, обычно это делает сервер
+    <input type="text"> - основной тег, значит, что мы что-то выводим (выдаст поле для ввода)
+    type="text" - главный атрибут, обозначает формат ввода, в данном случае текст 
+    value="" - задает текст по умолчанию
+    readonly - делает input только для чтения (поле не активно для вноса изменений)-->
+      <!-- <label for=""></label> - тег для обозначения поля ввода (объясняет нам, что
+    находится в input) 
+    for="" - говорит для чего преднозначен данный label.
+    Связывая label с input через for и id мы получаем фокус на input при нажатии на содержимое label -->
+      <!-- <div></div> - блоочная обертка -->
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Введите email" />
+      </div>
+      <!-- type="email" - если вводим не почту, то всплывет уведомление о некорректной записи 
+      placeholder="" - выводит подсказку, что нужно сделать в данном поле (отображено серым цветом)-->
+      <div>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" />
+      </div>
+      <!-- type="password" - ввод будет пароля будет осуществлен звездачками -->
+      <div>
+        <label for="number">Число</label>
+        <input type="number" id="number" min="0" />
+      </div>
+      <!-- type="number" - преднозначен для ввода числа, буквы ввести не получится, в поле будут стрелочки для удобства прокрутки чисел
+      min="0" - задает минимально возможное число -->
+      <div>
+        <label for="range">Range</label>
+        <input type="range" id="range" min="0" max="10" step="2" />
+      </div>
+      <!-- type="range" - ползунок для выбора диапазона 
+        step="" - шаг или сколько за раз мы можем менять значение -->
+      <div>
+        <label for="date">Дата</label>
+        <input type="date" id="date" />
+      </div>
+      <!-- type="date" - поле для даты с возможностью выбора в колендаре даты -->
+      <div>
+        <label for="color">Цвет</label>
+        <input type="color" id="color" />
+      </div>
+      <!-- type="color" - поле с возможностью выбора цвета на палитре -->
+
+      <!-- Как вписывать текс на множестве строчек -->
+      <div>
+        <label for="message">Сообщение</label>
+        <br />
+        <textarea name="" id="message" cols="30" rows="10"></textarea>
+      </div>
+      <!-- <textarea name="" id="" cols="30" rows="10"></textarea> - выводит многострочное поле для ввода текста 
+      cols="30" - количество колонок
+      rows="10" - количество строчек
+      -->
+
+      <!-- Выбор из нескольких варианто -->
+      <div>
+        <label for="sex">Ваш пол</label>
+        <select name="" id="">
+          <option value="male">Мужчина</option>
+          <option value="female" selected>Женщина</option>
+          <option value="other">Другое</option>
+        </select>
+      </div>
+      <!-- <select name="" id=""></select> - позволяет выбрать что-то уже из определенного списка 
+      <option value=""></option> - задаем варианты ответов 
+    selected - значение по умолчанию-->
+
+      <!-- Выбор только одного варианта -->
+      <div>
+        <label>Количество работ</label>
+        <input type="radio" name="work" /> 1
+        <input type="radio" name="work" /> 2
+        <input type="radio" name="work" /> 5
+        <input type="radio" name="work" /> 10+
+      </div>
+      <!-- type="radio" - выводит кружок, используется когда нам нужно выбрать только одну опцию
+      name="" - атрибут для того чтобы можно было выбрать только один кружок (при условии, что значение атрибута одинаковое), если его не прописать можно выбрать несколько кружков-->
+
+      <!-- Выбор нескольких вариантов -->
+      <div>
+        <label>Любимая еда</label>
+        <input type="checkbox" name="food" /> Картошка
+        <input type="checkbox" name="food" /> Рис
+        <input type="checkbox" name="food" /> Макароны
+        <input type="checkbox" name="food" /> Греча
+      </div>
+      <!-- type="checkbox" - выводит квадратный элемент, используется когда нам нужно выбрать несколько вариантов -->
+
+      <!-- 2 способа создание кнопки -->
+
+      <input type="submit" value="Отправить форму" />
+      <!-- type="submit" - выводит кнопку для отправки введенные данные обработчику
+      value="" - задает имя кнопки-->
+      <button type="submit">Отправить форму</button>
+      <!-- <button></button> - выводит кнопку, более распространенный способ -->
+    </form>
+  </body>
+</html>
